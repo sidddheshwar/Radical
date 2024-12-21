@@ -1,0 +1,17 @@
+controlplane $ cat array.sh 
+#!/bin/bash
+
+myarray=(1 2 3 6 5 9 4 40 hey buddy siddh kirti)
+#updating array value
+myarray+=(hello sid how are you)
+
+echo "${#myarray[*]}"
+
+#prinitng length of my array
+length=${#myarray[@]} 
+echo "lenght of my array is : $length"
+#printing specific value from array
+echo "value of 3rd  index is : ${myarray[2]}"
+#printing value from 2nd to 5th index
+echo "value starting from 2nd index to next 5 values : ${myarray[*]:2:5}"
+controlplane $ 
