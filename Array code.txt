@@ -1,0 +1,33 @@
+controlplane $ bash array.sh 
+the whole array is 0myarray[@]}
+lenght of my array is : 17
+value of 3rd  index is : 3
+value starting from 2nd index to next 5 values : 3 6 5 9 4
+controlplane $ vim array.sh 
+controlplane $ bash array.sh 
+the whole array is 1 2 3 6 5 9 4 40 hey buddy siddh kirti hello sid how are you
+lenght of my array is : 17
+value of 3rd  index is : 3
+value starting from 2nd index to next 5 values : 3 6 5 9 4
+controlplane $ cat array.sh 
+#!/bin/bash
+
+myarray=(1 2 3 6 5 9 4 40 hey buddy siddh kirti)
+#updating array value
+myarray+=(hello sid how are you)
+
+echo "the whole array is ${myarray[@]}"
+
+#prinitng length of my array
+length=${#myarray[@]} 
+echo "lenght of my array is : $length"
+#printing specific value from array
+echo "value of 3rd  index is : ${myarray[2]}"
+#printing value from 2nd to 5th index
+echo "value starting from 2nd index to next 5 values : ${myarray[*]:2:5}"
+controlplane $ 
+
+
+
+
+
